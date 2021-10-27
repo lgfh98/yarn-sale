@@ -9,12 +9,15 @@
 :root {
   --white: #ffffff;
   --black: #000000;
+  --dark: #232830;
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
   --hospital-green: #acd9b2;
   --text-sm: 14px;
   --text-md: 16px;
   --text-lg: 18px;
+  --text-xlg: 20px;
+  --logo-width: 150px;
 }
 
 body {
@@ -56,17 +59,19 @@ img {
 }
 
 .login__logo {
-  width: 150px;
+  width: var(--logo-width);
   margin-bottom: 48px;
   justify-self: center;
 }
 
 .login__title {
   margin-bottom: 12px;
+  font-size: var(--text-lg);
 }
 
 .login__subtitle {
   margin-bottom: 32px;
+  font-size: var(--text-md);
 }
 
 .login__label {
@@ -84,16 +89,20 @@ img {
 
 /* text */
 
-.text--size-sm {
+.text--size--sm {
   font-size: var(--text-sm);
 }
 
-.text--size-md {
+.text--size--md {
   font-size: var(--text-md);
 }
 
-.text--size-lg {
+.text--size--lg {
   font-size: var(--text-lg);
+}
+
+.text--size--xlg {
+  font-size: var(--text-xlg);
 }
 
 .text--weight--700 {
@@ -110,6 +119,10 @@ img {
 
 .text--color--very-light-pink {
   color: var(--very-light-pink);
+}
+
+.text--color--dark {
+  color: var(--dark);
 }
 
 .text--centered {
@@ -151,10 +164,98 @@ img {
   background-color: var(--hospital-green);
 }
 
+/* password-recovering */
+
+.password-recovering {
+  display: grid;
+  grid-template-rows: repeat(auto, min-content);
+}
+
+.password-recovering__logo {
+  width: var(--logo-width);
+  justify-self: center;
+  margin-bottom: 48px;
+}
+
+.password-recovering__icon {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: var(--text-input-field);
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  margin-bottom: 24px;
+}
+
+.password-recovering__icon img {
+  width: 80px;
+}
+
+.password-recovering__title {
+  font-size: var(--text-lg);
+  margin-bottom: 12px;
+}
+
+.password-recovering__subtitle {
+  font-size: var(--text-md);
+  margin-bottom: 32px;
+  max-width: 400px;
+}
+
+.password-recovering__resend {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+  justify-self: center;
+  justify-content: center;
+}
+
+.password-recovering__button {
+  margin-bottom: 24px;
+  max-width: 300px;
+  justify-self: center;
+}
+
+/* link */
+
+.link {
+  color: var(--hospital-green);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
 /* media queries */
 
 @media screen and (min-width: 640px) {
+  body {
+    font-size: var(--text-md);
+  }
+
   .login__logo {
     display: none;
+  }
+
+  .password-recovering__logo {
+    display: none;
+  }
+
+  .login__title {
+    font-size: var(--text-xlg);
+  }
+
+  .login__subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .password-recovering__title {
+    font-size: var(--text-xlg);
+  }
+
+  .password-recovering__subtitle {
+    font-size: var(--text-lg);
   }
 }
