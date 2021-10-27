@@ -18,6 +18,7 @@
   --text-lg: 18px;
   --text-xlg: 20px;
   --logo-width: 150px;
+  --login-max-width: 500px;
 }
 
 body {
@@ -42,6 +43,10 @@ img {
   margin-right: auto;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .absolute-centered {
   display: grid;
   place-items: center;
@@ -51,38 +56,39 @@ img {
   min-height: inherit;
 }
 
-/* login */
+/* new-password */
 
-.login {
+.new-password {
+  width: 100%;
   display: grid;
   grid-template-rows: repeat(auto, min-content);
 }
 
-.login__logo {
+.new-password__logo {
   width: var(--logo-width);
   margin-bottom: 48px;
   justify-self: center;
 }
 
-.login__title {
+.new-password__title {
   margin-bottom: 12px;
   font-size: var(--text-lg);
 }
 
-.login__subtitle {
+.new-password__subtitle {
   margin-bottom: 32px;
   font-size: var(--text-md);
 }
 
-.login__label {
+.new-password__label {
   margin-bottom: 8px;
 }
 
-.login__input {
+.new-password__input {
   margin-bottom: 12px;
 }
 
-.login__button {
+.new-password__button {
   margin-top: 12px;
   margin-bottom: 32px;
 }
@@ -164,6 +170,12 @@ img {
   background-color: var(--hospital-green);
 }
 
+.button--border-green {
+  background-color: var(--white);
+  border: 1px solid var(--hospital-green);
+  color: var(--hospital-green);
+}
+
 /* password-recovering */
 
 .password-recovering {
@@ -228,26 +240,63 @@ img {
   text-decoration: underline;
 }
 
+/* login */
+
+.login {
+  width: 100%;
+  max-width: var(--login-max-width);
+  display: grid;
+  grid-template-rows: repeat(auto, min-content);
+}
+
+.login__logo {
+  width: var(--logo-width);
+  margin-bottom: 48px;
+  justify-self: center;
+}
+
+.login__label {
+  margin-bottom: 8px;
+}
+
+.login__forgot-password {
+  justify-self: center;
+  margin: 12px 0;
+}
+
+.login__button-login {
+  margin-top: 24px;
+}
+.login__button-sign-up {
+  margin-top: 40px;
+  position: absolute;
+  bottom: 12px;
+}
+
 /* media queries */
+
+@media screen and (min-width: 500px) {
+  .login__button-sign-up {
+    position: relative;
+  }
+}
 
 @media screen and (min-width: 640px) {
   body {
     font-size: var(--text-md);
   }
 
-  .login__logo {
-    display: none;
-  }
-
+  .new-password__logo,
+  .login__logo,
   .password-recovering__logo {
     display: none;
   }
 
-  .login__title {
+  .new-password__title {
     font-size: var(--text-xlg);
   }
 
-  .login__subtitle {
+  .new-password__subtitle {
     font-size: var(--text-lg);
   }
 

@@ -15,40 +15,29 @@
   </head>
   <body>
     <div class="page">
-      <div class="container inherit-min-height absolute-centered">
-        <div class="new-password">
-          <div class="new-password__logo">
+      <div
+        class="container inherit-min-height absolute-centered position-relative"
+      >
+        <div class="login">
+          <div class="login__logo">
             <img src="logos/logo_yard_sale.svg" alt="logo" />
           </div>
-          <h1 class="text--bold--700 text--centered new-password__title">
-            Create a new password
-          </h1>
-          <p
-            class="
-              text--weight--400 text--centered text--color--dark
-              new-password__subtitle
-            "
-          >
-            Enter a new password for yout account
-          </p>
+
           <form class="form">
-            <label class="label-container new-password__label" for="password">
+            <label class="label-container login__label" for="email">
               <span class="text--weight--700">Password</span>
               <input
-                class="input new-password__input"
-                id="password"
-                type="password"
-                placeholder="**********"
+                class="input login__input"
+                id="email"
+                type="email"
+                placeholder="email@example.com"
               />
             </label>
-            <label
-              class="label-container new-password__label"
-              for="password-confirm"
-            >
+            <label class="label-container login__label" for="password">
               <span class="text--weight--700">Re-enter password</span>
               <input
-                class="input new-password__input"
-                id="password-confirm"
+                class="input login__input"
+                id="password"
                 type="password"
                 placeholder="**********"
               />
@@ -56,9 +45,20 @@
           </form>
           <button
             type="button"
-            class="button button--green text--size--lg new-password__button"
+            class="button button--green text--size--md login__button-login"
           >
-            Confirm
+            Login
+          </button>
+          <a href="#" class="link login__forgot-password">Forgot my password</a>
+          <button
+            type="button"
+            class="
+              button button--border-green
+              text--size--md
+              login__button-sign-up
+            "
+          >
+            Sign up
           </button>
         </div>
       </div>
