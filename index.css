@@ -334,6 +334,47 @@ img {
   bottom: 12px;
 }
 
+/* main-section */
+
+.cards-container {
+  display: grid;
+  gap: 4px;
+  place-content: center;
+  grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__image {
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.product-card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.product-card__action {
+  width: 35px;
+  height: 35px;
+}
+
+.product-card__price {
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+
+.product-card__product-name {
+  font-weight: 400;
+  font-size: var(--text-sm);
+}
+
 /* media queries */
 
 @media screen and (min-width: 500px) {
@@ -365,6 +406,13 @@ img {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
 @media screen and (min-width: 640px) {
   body {
     font-size: var(--text-md);
@@ -391,5 +439,10 @@ img {
 
   .password-recovering__subtitle {
     font-size: var(--text-lg);
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 12px;
   }
 }
