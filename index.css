@@ -371,8 +371,9 @@ img {
 
 .mobile-menu {
   position: fixed;
+  top: 0;
+  bottom: 0;
   width: 100vw;
-  min-height: 100vh;
   padding: 24px;
   display: flex;
   flex-direction: column;
