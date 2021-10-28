@@ -59,6 +59,7 @@ img {
 
 .new-password {
   width: 100%;
+  max-width: 500px;
   display: grid;
   grid-auto-rows: min-content;
 }
@@ -90,6 +91,12 @@ img {
 .new-password__button {
   margin-top: 12px;
   margin-bottom: 32px;
+}
+
+/* padding */
+
+.pt-20 {
+  padding-top: 20px;
 }
 
 /* text */
@@ -296,24 +303,64 @@ img {
   bottom: 12px;
 }
 
+/* edit-account */
+
+.edit-account {
+  display: grid;
+  width: 100%;
+  max-width: 500px;
+  grid-auto-rows: min-content;
+}
+
+.edit-account__title {
+  margin-bottom: 20px;
+}
+
+.edit-account__label {
+  margin-bottom: 12px;
+}
+
+.edit-account__input {
+  width: 100%;
+}
+
+.edit-account__value {
+  height: 32px;
+}
+
+.edit-account__button {
+  margin-top: 20px;
+  position: absolute;
+  bottom: 12px;
+}
+
 /* media queries */
 
 @media screen and (min-width: 500px) {
   .login__button-sign-up,
-  .create-account__button-create-account {
+  .create-account__button-create-account,
+  .edit-account__button {
     position: initial;
+  }
+
+  .container--edit-account {
+    display: grid;
+    place-items: center;
   }
 }
 
 @media screen and (orientation: landscape) {
   .login__button-sign-up,
-  .create-account__button-create-account {
+  .create-account__button-create-account,
+  .edit-account__button {
     position: initial;
   }
 }
 
 @media screen and (max-height: 450px) {
-  .login__button-sign-up {
+  .login__button-sign-up,
+  .create-account__button-create-account,
+  .edit-account__button {
     position: initial;
   }
 }
