@@ -372,7 +372,12 @@ img {
 .mobile-menu {
   position: fixed;
   width: 100vw;
+  min-height: 100vh;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .mobile-menu__item {
