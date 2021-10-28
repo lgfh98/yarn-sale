@@ -367,6 +367,52 @@ img {
   border-top: 1px solid var(--very-light-pink);
 }
 
+/* mobile menu */
+
+.mobile-menu {
+  position: fixed;
+  width: 100vw;
+  padding: 24px;
+}
+
+.mobile-menu__item {
+  margin-bottom: 20px;
+  font-size: var(--text-md);
+}
+
+.mobile-menu__item--light {
+  font-weight: 400;
+}
+
+.mobile-menu__item--font-size-sm {
+  font-size: var(--text-sm);
+}
+
+.mobile-menu__item--green {
+  color: var(--hospital-green);
+  font-weight: 700;
+}
+
+.mobile-menu__menu {
+  list-style: none;
+}
+
+.mobile-menu__menu--underlining {
+  border-bottom: 1px solid var(--very-light-pink);
+  margin-bottom: 20px;
+}
+
+.mobile-menu__link {
+  font-weight: 700;
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+}
+
+.mobile-menu__category-title {
+  margin-bottom: 24px;
+}
+
 /* text */
 
 .text--size--sm {
