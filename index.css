@@ -537,6 +537,56 @@ img {
   font-size: var(--text-md);
 }
 
+/* my orders */
+
+.my-orders {
+  width: 100%;
+  max-width: 300px;
+}
+
+.my-orders__title {
+  font-size: var(--text-lg);
+  margin-bottom: 40px;
+  margin-top: 12px;
+}
+
+.my-orders__item-container {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 12px;
+}
+
+.my-orders__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-orders__item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-orders__item-right {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+}
+
+.my-orders__item-date {
+  font-weight: 700;
+  font-size: var(--text-md);
+}
+
+.my-orders__item-quantity {
+  color: var(--very-light-pink);
+  font-size: var(--text-sm);
+}
+
+.my-orders__item-price {
+  font-weight: 700;
+}
+
 /* media queries */
 
 @media screen and (min-width: 500px) {
